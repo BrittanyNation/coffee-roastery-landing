@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscribe — Ember &amp; Oak Coffee Roasters | Brittany Nation</title>
+<meta name="description" content="A calm subscription flow UI for Ember & Oak — blend, frequency, and grind chosen in plain steps, with a travelling order summary totaling $22. Original concept by Brittany Nation.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Subscribe — Ember &amp; Oak Coffee Roasters | Brittany Nation">
+<meta property="og:description" content="Subscription flow UI concept with a travelling summary — blend, frequency, grind, and total stated before submit. Espresso, caramel &amp; ember.">
+<meta property="og:url" content="https://brittanynation.github.io/coffee-roastery-landing/subscribe.html">
+<meta property="og:image" content="https://brittanynation.github.io/coffee-roastery-landing/og-image.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://brittanynation.github.io/coffee-roastery-landing/og-image.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar"><div class="wrap"><div class="brand">BRITTANY NATION <span>• DESIGN</span></div><nav class="nav" aria-label="Project"><a href="index.html">Home</a><a href="blends.html">Blends</a><a href="subscribe.html" aria-current="page">Subscribe</a><a href="https://github.com/BrittanyNation/coffee-roastery-landing">GitHub Repo</a></nav></div></header>
+<main id="main"><div class="wrap">
+  <section class="hero">
+    <p class="eyebrow">Subscription Flow UI</p>
+    <h1>Fresh beans, <em>on your schedule.</em></h1>
+    <p class="lede">Pick a blend, pick a rhythm, and see the full total before anything is submitted. Pause, swap, or cancel anytime — that promise sits on this page, not in fine print.</p>
+  </section>
+  <div class="grid2">
+    <form aria-label="Subscription form (mock)">
+      <h2 style="margin-top:0">Set up your subscription</h2>
+      <label for="blend">Blend</label>
+      <select id="blend" name="blend"><option selected>Ember House — Medium roast</option><option>First Light — Light-medium roast</option><option>Night Oak — Dark roast</option><option>Surprise me — roaster's pick each time</option></select>
+      <label for="freq">How often?</label>
+      <select id="freq" name="freq"><option>Every week</option><option selected>Every 2 weeks</option><option>Every 4 weeks</option></select>
+      <label for="grind">Grind</label>
+      <select id="grind" name="grind"><option selected>Whole bean</option><option>Drip</option><option>Espresso</option><option>French press</option></select>
+      <label for="email">Email for delivery updates</label>
+      <input id="email" name="email" type="email" value="sample@example.com" autocomplete="email">
+      <p class="hint">Used only for roast-day and shipping notes for this sample subscription. No real subscription is created and no email is sent.</p>
+      <div class="check"><input type="checkbox" id="gift" name="gift"><label for="gift" style="margin:0">This is a gift — include a hand-written first-bag note (free)</label></div>
+      <div class="check"><input type="checkbox" id="decaf" name="decaf"><label for="decaf" style="margin:0">Add a rotating decaf bag each delivery (+$17)</label></div>
+      <button class="btn btn-ember" type="button" style="border:0;cursor:pointer;width:100%;margin-top:1rem">Start subscription — $22 total →</button>
+      <p class="hint">Mock form for a portfolio concept — the button creates nothing and charges nothing.</p>
+    </form>
+    <aside class="summary" aria-label="Order summary">
+      <h2 style="margin-top:0;color:var(--cream)">Your subscription</h2>
+      <p><strong>Blend:</strong> Ember House, 12 oz<br><strong>Frequency:</strong> Every 2 weeks<br><strong>Grind:</strong> Whole bean<br><strong>First roast day:</strong> Tuesday (sample)</p>
+      <hr style="border-color:#5A4636">
+      <p>Bag (subscription price) — $18<br>Shipping — $4<br><strong>Total per delivery — $22</strong></p>
+      <p>Free shipping starts at $38 — add the decaf bag above and shipping drops to $0. Pause, swap, or cancel anytime from your account page.</p>
+    </aside>
+  </div>
+  <section aria-label="Questions">
+    <h2>Plain-word questions</h2>
+    <details><summary>When is my coffee roasted?</summary><p>On Tuesdays, in this sample schedule — your bag's roast date is printed on the label and repeated in the shipping email.</p></details>
+    <details><summary>Can I pause or cancel?</summary><p>Yes — pause for a delivery, swap blends, or cancel entirely, from your account page, with no phone call and no fee.</p></details>
+    <details><summary>What if I don't like a blend?</summary><p>Tell us within the first delivery (sample policy) and the next bag is a different blend on us — the promise is stated here, before you subscribe.</p></details>
+  </section>
+</div></main>
+<footer><div class="wrap"><p><strong>Ember &amp; Oak Coffee Roasters</strong> is a fictional business. Original portfolio concept by Brittany Nation. Sample prices and figures throughout; no real subscriptions are taken.</p><p><a href="https://github.com/BrittanyNation/coffee-roastery-landing">View the code on GitHub</a></p></div></footer>
+</body>
+</html>
