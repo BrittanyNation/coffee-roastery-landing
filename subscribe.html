@@ -24,31 +24,39 @@
     <h1>Fresh beans, <em>on your schedule.</em></h1>
     <p class="lede">Pick a blend, pick a rhythm, and see the full total before anything is submitted. Pause, swap, or cancel anytime — that promise sits on this page, not in fine print.</p>
   </section>
-  <div class="grid2">
-    <form aria-label="Subscription form (mock)">
+  <div class="grid2" id="subscribe-grid">
+    <form id="subscribe-form" aria-label="Subscription form (mock)" novalidate>
       <h2 style="margin-top:0">Set up your subscription</h2>
       <label for="blend">Blend</label>
-      <select id="blend" name="blend"><option selected>Ember House — Medium roast</option><option>First Light — Light-medium roast</option><option>Night Oak — Dark roast</option><option>Surprise me — roaster's pick each time</option></select>
+      <select id="blend" name="blend"><option value="ember" selected>Ember House — Medium roast</option><option value="first">First Light — Light-medium roast</option><option value="night">Night Oak — Dark roast</option><option value="surprise">Surprise me — roaster's pick each time</option></select>
       <label for="freq">How often?</label>
       <select id="freq" name="freq"><option>Every week</option><option selected>Every 2 weeks</option><option>Every 4 weeks</option></select>
       <label for="grind">Grind</label>
       <select id="grind" name="grind"><option selected>Whole bean</option><option>Drip</option><option>Espresso</option><option>French press</option></select>
       <label for="email">Email for delivery updates</label>
-      <input id="email" name="email" type="email" value="sample@example.com" autocomplete="email">
+      <input id="email" name="email" type="email" value="sample@example.com" autocomplete="email"><p class="error" id="err-email">Please enter a valid email address for the delivery updates.</p>
       <p class="hint">Used only for roast-day and shipping notes for this sample subscription. No real subscription is created and no email is sent.</p>
       <div class="check"><input type="checkbox" id="gift" name="gift"><label for="gift" style="margin:0">This is a gift — include a hand-written first-bag note (free)</label></div>
       <div class="check"><input type="checkbox" id="decaf" name="decaf"><label for="decaf" style="margin:0">Add a rotating decaf bag each delivery (+$17)</label></div>
-      <button class="btn btn-ember" type="button" style="border:0;cursor:pointer;width:100%;margin-top:1rem">Start subscription — $22 total →</button>
+      <button class="btn btn-ember" type="submit" id="subscribe-btn" style="border:0;cursor:pointer;width:100%;margin-top:1rem">Start subscription — $22 total →</button>
       <p class="hint">Mock form for a portfolio concept — the button creates nothing and charges nothing.</p>
     </form>
     <aside class="summary" aria-label="Order summary">
       <h2 style="margin-top:0;color:var(--cream)">Your subscription</h2>
-      <p><strong>Blend:</strong> Ember House, 12 oz<br><strong>Frequency:</strong> Every 2 weeks<br><strong>Grind:</strong> Whole bean<br><strong>First roast day:</strong> Tuesday (sample)</p>
+      <p id="sum-details"><strong>Blend:</strong> Ember House — Medium roast, 12 oz<br><strong>Frequency:</strong> Every 2 weeks<br><strong>Grind:</strong> Whole bean<br><strong>First roast day:</strong> Tuesday (sample)</p>
       <hr style="border-color:#5A4636">
-      <p>Bag (subscription price) — $18<br>Shipping — $4<br><strong>Total per delivery — $22</strong></p>
-      <p>Free shipping starts at $38 — add the decaf bag above and shipping drops to $0. Pause, swap, or cancel anytime from your account page.</p>
+      <p id="sum-lines">Bag (subscription price) — $18<br>Shipping — $4<br><strong>Total per delivery — $22</strong></p>
+      <p id="sum-note">Free shipping starts at $38. Pause, swap, or cancel anytime from your account page.</p>
     </aside>
   </div>
+  <section id="sub-confirmation" class="confirmation" aria-label="Subscription confirmation" hidden>
+    <h2 style="margin-top:0">Your sample subscription is set up.</h2>
+    <p>Reference: <strong id="conf-ref"></strong></p>
+    <p id="conf-summary"></p>
+    <p>Roast-day and shipping notes would go to <strong id="conf-email"></strong>, starting with the next Tuesday roast (sample schedule).</p>
+    <p class="hint">This is a portfolio demo — no real subscription was created, no payment was taken, and no email will be sent. Pause, swap, or cancel anytime — in a live shop, that promise would live on your account page.</p>
+    <p><a class="btn btn-ember" href="blends.html">Browse the blends again →</a></p>
+  </section>
   <section aria-label="Questions">
     <h2>Plain-word questions</h2>
     <details><summary>When is my coffee roasted?</summary><p>On Tuesdays, in this sample schedule — your bag's roast date is printed on the label and repeated in the shipping email.</p></details>
@@ -57,5 +65,6 @@
   </section>
 </div></main>
 <footer><div class="wrap"><p><strong>Ember &amp; Oak Coffee Roasters</strong> is a fictional business. Original portfolio concept by Brittany Nation. Sample prices and figures throughout; no real subscriptions are taken.</p><p><a href="https://github.com/BrittanyNation/coffee-roastery-landing">View the code on GitHub</a></p></div></footer>
+<script src="subscribe.js"></script>
 </body>
 </html>
