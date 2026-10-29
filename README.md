@@ -20,7 +20,7 @@ Built to support applications for **UI Designer**, **Front-End Designer**, **Web
 - **Honest form design** — a mock subscription form that says what the email will be used for before submission and states plainly that no real subscription is created
 - **Accessibility-minded choices** — contrast-safe espresso/caramel/cream pairings, badges and states that use words, never color alone, skip link, `aria-current` navigation, a real `<table>` for blend comparison, native `<details>` FAQs, and real labels on every field
 - **Responsive layout** — stat, blend, and note grids step down cleanly on small screens, the comparison table scrolls horizontally while remaining readable on phones, and the subscribe summary stacks below the form on mobile
-- **Semantic, framework-free build** — hand-written HTML/CSS, one stylesheet, no JavaScript required, no external images; all visuals are CSS-only
+- **Semantic, framework-free build** — hand-written HTML/CSS, one stylesheet, vanilla JavaScript powers the subscription flow, no external images; all visuals are CSS-only
 
 ## Palette
 
@@ -43,7 +43,7 @@ Built to support applications for **UI Designer**, **Front-End Designer**, **Web
 
 ## Workflow note
 
-My design workflow runs in **Sketch and Webflow**, where I design interfaces and systems visually. This demo is hand-built in HTML/CSS to show the same landing-page thinking — taste in plain words, roast dates, and honest pricing — expressed directly in code.
+My design workflow runs in **Sketch and Webflow**, where I design interfaces and systems visually. This demo is hand-built in HTML/CSS/JS to show the same landing-page thinking — taste in plain words, roast dates, and honest pricing — expressed directly in code.
 
 ## Files
 
@@ -56,3 +56,7 @@ My design workflow runs in **Sketch and Webflow**, where I design interfaces and
 ## Note
 
 This is an original portfolio concept created by Brittany Nation. Ember & Oak Coffee Roasters is a fictional business; this project is not affiliated with any real roastery. All names, prices, schedules, and figures shown are sample data, and the site takes no real orders or subscriptions.
+
+## Working subscription flow
+
+`subscribe.js` makes the flow real: blend, frequency, grind, gift, and decaf choices update the summary and per-delivery total live (per-blend subscription prices from the blends table, $4 shipping, free at $38); choosing a blend on the blends page pre-selects it on the subscribe page; the form validates the email and ends in a confirmation state with a generated reference. Front-end demo only — no real subscription is created.
